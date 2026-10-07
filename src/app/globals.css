@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+/* Design tokens: Stitch "Soma & Serenity" structure, recoloured to the
+   Belvaro logo (deep plum + rose gold). */
+@theme {
+  /* Warm blush-cream neutrals */
+  --color-background: #fbf7f4;
+  --color-on-background: #24161b;
+  --color-surface: #fbf7f4;
+  --color-surface-dim: #dccfc8;
+  --color-surface-bright: #fbf7f4;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f6f0ec;
+  --color-surface-container: #f0e7e2;
+  --color-surface-container-high: #e9dfd9;
+  --color-surface-container-highest: #e2d6cf;
+  --color-surface-variant: #e2d6cf;
+  --color-on-surface: #24161b;
+  --color-on-surface-variant: #54454a;
+  --color-inverse-surface: #3e232c;
+  --color-inverse-on-surface: #f6efeb;
+  --color-outline: #7d6c71;
+  --color-outline-variant: #cdbfc2;
+
+  /* Deep plum (logo background) */
+  --color-primary: #2a161d;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #3e232c;
+  --color-on-primary-container: #c9a9a4;
+  --color-primary-fixed: #f1dde2;
+  --color-primary-fixed-dim: #d9bcc4;
+
+  /* Rose gold (logo lettering). The base is deepened to copper so text and
+     buttons on cream meet WCAG AA; the lighter golds are for plum backgrounds. */
+  --color-secondary: #94573e;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #ce9874;
+  --color-on-secondary-container: #6e3d2b;
+  --color-secondary-fixed: #e9c4aa;
+  --color-secondary-fixed-dim: #ce9874;
+
+  --color-tertiary: #2a161d;
+  --color-tertiary-container: #3e232c;
+  --color-on-tertiary-container: #dbb399;
+
+  --color-error: #ba1a1a;
+
+  /* Stitch shifts the radius scale down one step. */
+  --radius: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+
+  --spacing-space-2xs: 0.25rem;
+  --spacing-space-xs: 0.5rem;
+  --spacing-space-sm: 0.75rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-space-xl: 2rem;
+  --spacing-space-2xl: 3rem;
+  --spacing-space-3xl: 4.5rem;
+  --spacing-space-4xl: 6rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-margin-mobile: 1.25rem;
+  --spacing-margin-desktop: 3rem;
+
+  --text-display-lg: 56px;
+  --text-display-lg--line-height: 64px;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-lg--font-weight: 400;
+  --text-display-lg-mobile: 38px;
+  --text-display-lg-mobile--line-height: 44px;
+  --text-display-lg-mobile--letter-spacing: -0.015em;
+  --text-display-lg-mobile--font-weight: 400;
+  --text-headline-lg: 40px;
+  --text-headline-lg--line-height: 48px;
+  --text-headline-lg--letter-spacing: -0.01em;
+  --text-headline-lg--font-weight: 400;
+  --text-headline-lg-mobile: 30px;
+  --text-headline-lg-mobile--line-height: 36px;
+  --text-headline-lg-mobile--letter-spacing: -0.01em;
+  --text-headline-lg-mobile--font-weight: 400;
+  --text-headline-md: 28px;
+  --text-headline-md--line-height: 34px;
+  --text-headline-md--letter-spacing: -0.005em;
+  --text-headline-md--font-weight: 500;
+  --text-headline-sm: 22px;
+  --text-headline-sm--line-height: 28px;
+  --text-headline-sm--font-weight: 500;
+  --text-body-lg: 17px;
+  --text-body-lg--line-height: 28px;
+  --text-body-md: 15px;
+  --text-body-md--line-height: 24px;
+  --text-body-sm: 13px;
+  --text-body-sm--line-height: 20px;
+  --text-label-md: 12px;
+  --text-label-md--line-height: 16px;
+  --text-label-md--letter-spacing: 0.06em;
+  --text-label-md--font-weight: 600;
+  --text-label-sm: 11px;
+  --text-label-sm--line-height: 14px;
+  --text-label-sm--letter-spacing: 0.08em;
+  --text-label-sm--font-weight: 600;
+}
+
+@theme inline {
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-garamond), ui-serif, Georgia, serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Keeps anchored sections clear of the sticky header. */
+    scroll-padding-top: 7rem;
+  }
+
+  body {
+    overscroll-behavior: none;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+  user-select: none;
+}
